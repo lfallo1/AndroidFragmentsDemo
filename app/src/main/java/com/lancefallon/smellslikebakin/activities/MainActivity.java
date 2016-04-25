@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.lancefallon.smellslikebakin.R;
+import com.lancefallon.smellslikebakin.activities.checkboxes.DualPaneFragment;
 import com.lancefallon.smellslikebakin.activities.checkboxes.ViewPagerFragment;
 
 public class MainActivity extends AppCompatActivity

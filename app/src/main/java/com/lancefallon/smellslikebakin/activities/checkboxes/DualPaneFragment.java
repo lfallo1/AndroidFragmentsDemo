@@ -1,4 +1,4 @@
-package com.lancefallon.smellslikebakin.activities;
+package com.lancefallon.smellslikebakin.activities.checkboxes;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
