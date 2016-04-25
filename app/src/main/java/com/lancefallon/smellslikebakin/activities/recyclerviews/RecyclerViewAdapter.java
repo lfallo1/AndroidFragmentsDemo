@@ -1,4 +1,4 @@
-package com.lancefallon.smellslikebakin.activities;
+package com.lancefallon.smellslikebakin.activities.recyclerviews;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,20 +10,11 @@ import android.widget.TextView;
 import com.lancefallon.smellslikebakin.R;
 import com.lancefallon.smellslikebakin.dal.Recipes;
 
-/**
- * Created by lancefallon on 4/24/16.
- */
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder> {
-
-    private final ListFragment.OnRecipeSelectedInterface mListener;
-
-    public ListAdapter(ListFragment.OnRecipeSelectedInterface listener){
-        mListener = listener;        
-    }
+public abstract class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ListViewHolder> {
     
     @Override
     public ListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_list_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(getLayoutId(), parent, false);
         return new ListViewHolder(view);
     }
 
@@ -45,8 +36,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
 
         public ListViewHolder(View view) {
             super(view);
-            mImageView = (ImageView) view.findViewById(R.id.fragment_list_item_imageView);
-            mTextView = (TextView)view.findViewById(R.id.fragment_list_item_textView);
+            mImageView = (ImageView) view.findViewById(R.id.recipe_item_imageView);
+            mTextView = (TextView)view.findViewById(R.id.recipe_item_textView);
             mImageView.setOnClickListener(this);
         }
 
@@ -59,8 +50,12 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         @Override
         public void onClick(View v) {
             if(v == mImageView){
-                mListener.onListRecipeSelected(mPosition);
+                onRecipeSelected(mPosition);
             }
         }
     }
+
+    protected abstract void onRecipeSelected(int position);
+
+    protected abstract int getLayoutId();
 }

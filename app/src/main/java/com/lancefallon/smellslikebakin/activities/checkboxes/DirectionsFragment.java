@@ -1,4 +1,4 @@
-package com.lancefallon.smellslikebakin.activities;
+package com.lancefallon.smellslikebakin.activities.checkboxes;
 import com.lancefallon.smellslikebakin.dal.Recipes;
 
 public class DirectionsFragment extends CheckBoxFragment {

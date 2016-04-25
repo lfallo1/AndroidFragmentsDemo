@@ -10,7 +10,7 @@
         android:layout_weight="1"
         android:scaleType="fitCenter"
         android:layout_margin="8dp"
-        android:id="@+id/fragment_list_item_imageView"/>
+        android:id="@+id/recipe_item_imageView"/>
 
     <TextView
         android:layout_width="0dp"
@@ -19,6 +19,6 @@
         android:text="Placeholder text"
         android:textSize="24sp"
         android:layout_margin="12dp"
-        android:id="@+id/fragment_list_item_textView"/>
+        android:id="@+id/recipe_item_textView"/>
 
 </LinearLayout>

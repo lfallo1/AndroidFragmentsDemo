@@ -1,4 +1,4 @@
-package com.lancefallon.smellslikebakin.activities;
+package com.lancefallon.smellslikebakin.activities.checkboxes;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.lancefallon.smellslikebakin.R;
+import com.lancefallon.smellslikebakin.activities.checkboxes.DirectionsFragment;
+import com.lancefallon.smellslikebakin.activities.checkboxes.IngredientsFragment;
 import com.lancefallon.smellslikebakin.dal.Recipes;
 
 public class ViewPagerFragment extends Fragment {
